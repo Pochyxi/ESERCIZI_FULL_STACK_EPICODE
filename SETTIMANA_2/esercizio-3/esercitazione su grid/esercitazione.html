@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid box</title>
+    <style>
+        body{
+            width: 100vw;
+        }
+
+        /* utilizzo di grid-column e grid-row */
+        .container {
+            padding: 5px;
+            width: 100%;
+            height: 100vh;
+            border: 1px solid red;
+            display: grid; /* può essere anche inline-grid, cioè genererà un'inline-level grid */
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* dichiariamo quante colonne avrà il nostro template */
+                                 /* 1 2 3 4 5 6 7     il valore rappresenta la larghezza mentre lo spazio la riga */ 
+            
+            grid-template-rows:  1fr 5fr 1fr; /* dichiariamo quante righe avrà il nostro template
+                                  1 2 3 4 5   il valore rappresenta la larghezza della colonna e lo spazio, la linea della griglia */
+            grid-row-gap: 2%;
+            grid-column-gap: 2%;
+            
+        }
+            .container .item {
+                padding: 2px;
+                margin: 2px;
+                width: auto;
+                height: auto;
+            }
+            .container .item-1 {
+                border: 2px solid black;
+                grid-column: 1/7; /* 1 corrisponde all'inizio della prima colonna mentre 7 corrisponde all'ultima riga della quarta colonna */
+                grid-row: 1/2;
+            }
+            .container .item-2 {
+                border: 2px solid rgb(16, 169, 44);
+                grid-column: 1/4;
+                grid-row: 2/3;
+            }
+            .container .item-3 {
+                border: 2px solid rgb(16, 16, 169);
+                grid-column: 4/7;
+                grid-row: 2/3;
+            }
+            .container .item-4 {
+                border: 2px solid rgb(199, 219, 20);
+                grid-column: 1/7;
+                grid-row: 3/5;
+            }
+
+        /* utilizzo del template area */
+        .container2 {
+            padding: 5px;
+            width: 100%;
+            height: 100vh;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr; 
+            grid-template-rows: 1fr 5fr 1fr; /* con le frazioni intendiamo che sia l'header che il footer saranno un quinto del main */
+            grid-template-areas: 
+            "header header header" /* qui diciamo che l'header (item-1) occuperà tutte e 3 colonne ma solo la prima riga */
+            "main main sidebar"  /* in questo caso il main occuperà 2 colonne ed una sarà lasciata alla sidebar */
+            "footer footer footer"; /* il footer occupera tutte e 3 le colonne e l'ultima riga */
+            grid-gap: 2% 2%;
+        }
+            .container2 .item {
+                padding: 2px;
+                margin: 2px;
+                width: auto;
+                height: auto;
+            }
+            .container2 .item-1 {
+                grid-area: header; /* grid-area dichiara che il div item-1 sarà il nostro header */
+                border: 2px black solid;
+            }
+            .container2 .item-2 {
+                border: 2px solid rgb(16, 169, 44);
+                grid-area: sidebar; /* div item-2 sarà la sidebar */
+            }
+            .container2 .item-3 {
+                border: 2px solid rgb(16, 16, 169);
+                grid-area: main; /* div item-3 sarà il main */
+            }
+            .container2 .item-4 {
+                border: 2px solid rgb(199, 219, 20);
+                grid-area: footer; /* div item-4 sarà il footer */
+            }
+
+            /*  container justify-items(row-axis):      stretch; valore di default       -> riempie l'INTERA LARGHEZZA della cella
+                                                        start;                           -> allinea gli elementi in modo che si attacchino al BORDO INIZIALE della loro cella
+                                                        end;                             -> allinea gli elementi in modo che si attacchino al BORDO FINALE della loro cella
+                                                        center;                          -> allinea gli elementi al CENTRO della loro cella
+
+                container align-items(column-axis):     stretch; valore di default       -> riempie l'INTERA ALTEZZA della cella
+                                                        start;                           -> allinea gli elementi in modo che si attacchino al MARGINE SUPERIORE della loro cella
+                                                        end;                             -> allinea gli elementi in modo che si attacchino al MARGINE INFERIORE della loro cella 
+                                                        center;                          -> allinea gli elementi al CENTRO della loro cella
+                                                        baseline                         -> allinea gli elementi lungo la linea di base del testo
+                
+                SHORT HAND = place-items: <align-items>/<justify-items>                  -> place-items: stretch/stretch (default)*/ 
+                
+
+            /*  per dare le proprietà ai singoli items si utilizza justify-self:    start;
+                                                                                    end;
+                                                                                    center;
+                                                                                    stretch (default) 
+
+                                                                   align-self:      start;
+                                                                                    end;
+                                                                                    center;
+                                                                                    stretch; (default) 
+                                                                                    
+                SHORT HAND = place-self: <align-self>/<justify-self>                -> place-self: stretch/stretch (default) 
+            */
+                
+
+    </style>
+</head>
+<body>
+
+    <div class="container"><!-------------------------------- questo è il contenitore a cui si deve dare la proprietà display:grid -->
+        <div class="item item-1">
+            <h1 style="text-align: center;">Esempio con grid-column e grid-row</h1>
+        </div><!-------------------- questi sono i grid items, un diretto discendente di container -->
+        <div class="item item-2"> 
+            <p class="sub-item"></p><!----------------------- questo è un sub item -->
+        </div>
+        <div class="item item-3"> 
+
+        </div>
+        <div class="item item-4"> 
+            <h1 style="text-align: center;">A seguire l'esempio con template area</h1>
+        </div>
+      </div>
+<!---------------------seconda pagina----------------->
+
+    <div class="container2">
+        <div class="item item-1">
+            <h1 style="text-align: center;">Esempio con grid-template-area </h1>
+        </div>
+        <div class="item item-2"> 
+                <p class="sub-item"></p>
+        </div>
+        <div class="item item-3"> 
+
+        </div>
+        <div class="item item-4"> 
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import 'buttons';
+@import 'variables';
+
+.showcase {
+    background-color: $bgColor;
+    padding: $showCasePadding;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.container {
+    width: 100%;
+}
+
+img {
+    max-width: $imgHeight;
+    max-height: $imgWidth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    & ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    & li { 
+        list-style: none;
+        margin-left: 1em;
+    }
+    & a {
+        text-decoration: none;
+        color: $liColor;
+    }
+}
+
+.my-1 {
+    padding-bottom: $paragraphPaddingBottom;
+}

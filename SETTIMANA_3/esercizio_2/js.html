@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            height: 100wh;
+           text-align: center;
+           margin: 0;
+           padding: 0;
+           line-height: 5;
+           background-color: yellow;
+           border: 10px red outset;
+           animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            50% {border-style: inset;}
+        }   
+        
+        h2 {
+            display: inline-block;
+        }
+        div:hover {
+            transform: scale(5);
+        }
+       div {
+        width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: black;
+            color: yellow;
+       }
+       label {
+           background-image: linear-gradient(to right, rgb(3, 202, 3), rgb(1, 104, 1));
+           border-radius: 5px;
+           padding: 5px;
+       }
+       label:hover{
+        background-image: linear-gradient(to right, rgb(3, 202, 3), rgb(0, 41, 0));
+        border: 3px outset rgb(0, 17, 0);
+       }
+       input {
+           display: none;
+       } 
+        
+    </style>
+</head>
+<body>
+    <h1>Benvenuti nella pratica di</h1>
+    <div>
+        <label for="genera">genera</label>
+        <input type="button" onclick="myFunc()" name="genera" id="genera">
+        <h2>Js</h2>
+    </div>
+    <h1>Apri la console per vedere la magia</h1>
+    <script src="js.js"></script>
+</body>
+</html>

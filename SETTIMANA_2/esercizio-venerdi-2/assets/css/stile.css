@@ -1,0 +1,307 @@
+/* IMPOSTAZIONI GENERALI */
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.8;
+    font-size: 1.5;
+}
+.lni {
+    color: #e42424; 
+    font-size: 3rem;
+}
+span .lni {
+    display: block;
+    text-align: center;
+    color: #e42424;
+    font-size: 4rem;
+}
+
+/* HEADER */
+header {
+    padding: 1em;
+    box-shadow: 0 2px 15px #d3d3d3;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    header nav {
+        height: 0;
+        overflow: hidden;
+        position: relative; /* perchè? */
+        width: 100%;
+        transition: height 1.5s ease-out;
+    }
+}
+header nav ul li {
+    list-style-type: none;
+}
+header nav ul li {
+    margin-bottom: .5em;
+}
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e42424;
+    font-size: 1.7rem;
+}
+header nav ul li a:not(.pulsante):hover{
+    color: #e42424;
+    text-decoration: underline;
+}
+
+
+.pulsante {
+    background-image: linear-gradient(90deg, #6cc1e2 0, #392f7a);
+    padding: 1.2rem 1.6rem;
+    font-size: 1.9rem;
+    color: white;
+    text-decoration: none;
+    border:0;
+    cursor: pointer;
+}
+input#menuButton {
+    display: none;
+}
+input#menuButton:checked ~ nav {
+    height: 150px;
+}
+/* MAIN */
+#banner {
+    padding: 1em;
+    text-align: start;
+    background-image: url(../images/banner.jpg); /* chiedere al prof come si mette l'opacità */
+    background-size: 185%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+}
+
+#banner div { 
+    margin-bottom: 1em;
+}
+#banner .pulsante {
+    padding: .7em;
+    outline: rgb(0, 0, 0, 0.4) 2px inset;
+}
+#banner p {
+    background-color: rgba(24, 24, 24, 0.1);
+    border-radius: 20px;
+}
+main h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+main h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0.7em;
+    line-height: 1.1;
+}
+main h3 {
+    font-size: 2.7rem;
+    margin-bottom: 0.5em;
+    line-height: 1;
+}
+article div {
+    margin-bottom: 3em;
+}
+.answare {
+    padding: 5em 2em;
+    background-color: #0c0633;
+    color: white;
+}
+.answare h1 {
+    text-shadow: 2px 2px 2px gainsboro;
+}
+.answare p {
+    margin: 2em 0em;
+}
+.answare .pulsante {
+    padding: 1.3em 2.2em;
+}
+.chi {
+    padding: 3em 2em;
+}
+.chi div {
+    margin: 3em 0;
+}
+.chi img {
+    width: 90%;
+}
+
+/* sezione contatti */
+ .main {
+     padding: 2em;
+ }
+ .main .contatti input {
+     width: 50%;
+     height: 3vh;
+     margin: 1em;
+     padding: 1em;
+ }
+ .main .contatti input:nth-child(4){
+     height: 8vh;
+ }   
+.main .pulsante {
+    padding: 1em;
+    border: none;
+    margin-bottom: 2em;
+}
+@media screen and (min-width: 800px) {
+    .main {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .main form {
+        padding: 3em;
+    }
+    .main .contatti input {
+        width: 80%;
+    }
+    .main div {
+        align-self: end;
+    }
+    .main h2, .main p {
+        margin-top: 2em;
+    }
+}
+/* FOOTER */
+footer {
+    background-color: rgb(238, 238, 238);
+    padding: 4em 5em;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+footer div {
+    margin: 1.5em 0;
+}
+
+footer form {
+    width: 100%;
+    margin: 1.5em auto;
+    
+}
+footer input {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3em;
+}
+footer .pulsante {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+
+
+
+/* RESPONSIVE */
+/* FOOTER RESPONSIVE */
+@media screen and (min-width: 850px) {
+    footer .flexi {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+    footer .flexi div {
+        flex-basis: 30%;
+        padding: 1em;
+    }
+    footer form {
+        padding: 1em;
+        flex-basis: 30%;
+    }
+    footer input {
+        padding: 1em;
+    }
+    footer .pulsante {
+        font-size: 1em;
+    }
+    .centro {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* PAGINA CHI SIAMO */
+.chi-siamo {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+.chi-siamo div {
+    margin-bottom: 3em;
+}
+.chi-siamo img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+.terzo table{
+    width: 100vw;
+    margin-top: 2em;
+
+}
+.terzo table tr {
+    margin-right: 5em;
+}
+/* .CHI RESPONSIVE */
+@media screen and (min-width:800px) {
+    .chi {
+        padding: 1em;
+        display: flex;
+        text-align: start;
+        justify-content: flex-start
+    }
+    .chi div {
+        margin: 2em 1em;
+        flex-basis: 40%;
+
+    }
+    .chi img {
+        width: 100%;
+        
+    }
+}
+/* .CHI-SIAMO RESPONSIVE */
+@media screen and (min-width:800px) {
+    .chi-siamo {
+        display: flex;
+        flex-direction: row;
+    }
+    .chi-siamo img {
+        width: 40vw;
+    }
+}
+/* MAIN RESPONSIVE */
+@media screen and (min-width:800px) {
+    .vantaggi {
+        display: flex;
+        justify-content: space-around;
+    }
+    .vantaggi div {
+        flex-basis: 33%;
+    }
+    .vantaggi div:not(:last-child){
+        margin-right: 1em;
+    }
+}
+

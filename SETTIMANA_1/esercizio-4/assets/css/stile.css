@@ -1,0 +1,188 @@
+/* IMPOSTAZIONI GENERALI */
+html {font-size: 62.5%;}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    background-image: url(/assets/img/sfondo.png);
+}
+hr {
+    display: none;
+}
+
+/* HEADER */
+header {
+    background-image: linear-gradient(to bottom, #00a0c6, #00566b);
+    text-align: center;
+    padding: 1.5em;
+    margin: 1.2em;
+    margin-bottom: 1.5em;
+    box-shadow:0px 5px 7px black;
+    font-size: 0.8em;
+
+}
+
+header p {
+    font-size: 1.5em;
+    color: white;
+    text-transform: uppercase;
+    margin: 1.5em auto;
+    font-weight: bold;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+/* MAIN */
+main {
+    padding: 1.5em;
+    background-color: white;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+article h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight:bold;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 1.5em;
+}
+
+article p,ul,ol,table {margin-bottom: 1.5em;}
+
+article strong {
+    color: magenta;
+}
+
+article code {
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+p.gray {
+    color: gray;
+}
+
+ol, ul {
+    margin-left: 2em;
+} 
+
+article a {
+    color: #0a75c1;
+}
+
+article iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+}
+
+/* TABELLE */
+table {
+    height: 400px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid blue;
+}
+
+table caption {
+    font-weight: bold;
+}
+
+table tr {
+    border: 1px solid gainsboro;
+}
+
+table th {
+    text-align: center;
+    height: 100px;
+    background-color: #416ac2;
+    border-left: 1px solid white;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: rgba(229, 228, 228, 0.665);
+}
+
+/* FORM */
+form fieldset input {
+    height: 40px;
+    width: 250px;
+    border: none;
+    border-bottom: 3px gray dotted;
+    
+}
+
+form fieldset button {
+    height: 35px;
+    width: 100px;
+    border-radius: none;
+    background-color: #0a75c1;
+    color: white;
+    font-size: 1em;
+    padding: 0px;
+    border: none;
+}
+
+main section {
+    background-color: gainsboro;
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+section h2 {
+    text-transform: uppercase;
+}
+
+/* ELEMENTI NELL' ASIDE */
+aside div {
+    background-color: gainsboro;
+    margin-top: 1.5em;
+    height: 200px;
+    padding: 20px;
+}
+
+p.dx {
+    margin-top: 100px;
+    float: right;
+}
+
+aside a {
+    color: #00a0c6;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-image: linear-gradient(to bottom,rgb(11, 89, 91),rgb(5, 38, 40));
+    text-align: center;
+    padding: 1.5em;
+    margin: 1.2em;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 1.5em;
+}
+
+footer a {
+    color: magenta;
+}
+

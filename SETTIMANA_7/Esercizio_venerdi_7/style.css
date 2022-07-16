@@ -1,0 +1,53 @@
+#contenitore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.cardContenitore {
+    padding: 1em;
+    width: 40%;
+    text-align: center;
+    border: 10px groove rgb(147, 139, 139);
+    margin: 1em 0;
+    /* background-image: linear-gradient(to top, black, rgb(0, 0, 128)); */
+    /* background-image: linear-gradient(to top, black, pink); */
+}
+.cardContenitore a {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+}
+
+.cardPhoto {
+    /* background-image: url(https://picsum.photos/id/1/200/300); */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.cardGenderM {
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+.cardGenderF {
+    font-size: 1.5rem;
+    margin-top: 1em;
+    
+}
+
+.cardGenderM ion-icon {
+    border: 2px black solid;
+    outline: 4px solid blue;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: blue;
+}
+.cardGenderF ion-icon {
+    border: 2px black solid;
+    outline: 4px solid pink;
+    background-color: pink;
+    padding: 5px;
+    border-radius: 50%;
+    color: black;
+}

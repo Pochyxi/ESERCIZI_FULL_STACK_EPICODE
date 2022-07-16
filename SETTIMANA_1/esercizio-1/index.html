@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Nel tag head metto le info ausiliarie -->
+<title>pagina</title>
+<meta charset="utf-8"> <!-- meta è un tag empty, cioè a differenza della maggioranza non chiude-->
+<meta name="description" content="descrizione della pagina">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- 
+    questo è un commento
+    Neln tag body metto tutti i ta che devono essere parsati dal browser
+-->
+<h1>Titolo principale</h1>
+<h2>Titolo principale</h2>
+<h3>Titolo principale</h3>
+<h4>Titolo principale</h4>
+<h5>Titolo principale</h5>
+<h6>Titolo principale</h6>
+<p>anche il paragrafo è un tag di blocco</p>
+<p>infatti</p>
+<!--le liste o elenchi puntati. due tipi di liste ordinate e non ordinate-->
+<ol type="a">
+    <li>primo elemento</li>
+    <li>secondo elemento</li>
+    <li>terzo elemento</li>
+</ol>
+<ul type="square">
+    <li>Provare il codice sull'editor
+        <ul>
+            <li>aprire una nuova pagina e inserire il codice</li>
+            <li>salvare le modifiche</li>
+        </ul>
+    </li>
+    <li>testare i risultati</li>
+</ul>
+<dl>
+    <dt>HTML</dt>
+    <dd>linguaggio di marcatura semantica</dd>
+    <dt>CSS</dt>
+    <dd>linguaggio di formattazione</dd>
+    <dt>Browser</dt>
+    <dd>Programma per la navigazione</dd>
+</dl>
+<address>tag semantico: ci dice che in questa porzione di contenuto ci sono infomazioni anagrafiche (contatti, indirizzi etc)</address>
+<blockquote cite="https://www.wikipedia.it">racchiude una citazione</blockquote>
+<!--caratteri speciali-->
+<p>&amp; e commerciale</p>
+<p>&quot; doppio apice</p>
+<p>&apos; apice &nbsp;&nbsp; spazzi vuoti</p>
+
+<!-- elementi di blocco vanno automaticamente a capo-->
+<!-- elementi inline automaticamente uno accanto all'altro-->
+<span>inserisco un testo</span>
+<span>inserisco un'altro testo</span>
+<p>in questo paragrafo metto una <b>parola in grassetto </b> a scopo estetico.
+    Esiste anche un <strong>altro modo</strong> di fare i grassetti. <br> <!--manda a capo, è un tag che non ha chiusura-->
+    Inoltre posso mettere una parola in <i>corsivo</i> per fini estetici oppure perche è un contenuto <em>importante</em>.
+    Qquesti tag cosi descritti seguono le regole della W3C aggiornati al <del>2015</del> <ins>2022</ins>
+</p>
+<!-- altri tag inline-->
+<p>questo è un paragrafo inserito in un tag <abbr title="Hyper Text Markup Language">Html</abbr> 
+    inserito con il tag <code>&lt;p&gt;</code>. Posso evidenziare contenuti anche grazie al tag <mark>mark</mark>
+    Posso inserire anche delle citazioni grazie al tag q <q>Qui va la mia citazione.. q sta per quotation</q>
+    Un'altro modo di inserire delle citazione è il tag <cite>inserisco la mia citazione</cite>. 
+    <!-- blockquote citazione ma elemento di blocco, cite elemnto inline-->
+
+</p>
+<!-- ulteriori tag di formattazione-->
+<p>questo è un <pre>testo non formattato</pre>. Posso indicare anche dei tasti della tastiera <kbd>premere CTRL</kbd>
+oppure degli output con <samp>F5 per aggiornare</samp>.</p>
+<hr><!-- horizontal row è una riga orizzotale. Anche hr è vuoto non ha chiusura-->
+<p>Quando parleremo di javascript impareremo a usare le <var>variabili</var>
+     e le funzioni matematiche come il quadrato ad esempio di <sup>2</sup> o <sub>3</sub> 
+</p>
+
+<!-- inserire un'immagine-->
+<img src="img/gatto1.jpeg" alt="gatto molto bello" width="300"><!-- posso usare anche height -->
+<!-- formati possibili: jpeg/jpg, png/apng, gif, svg, webP, AVIF -->
+<!-- se l'immagine è allo stesso livello del file html -< src="gatto1.jpeg"-->
+<!--immagine esterna-->
+<img src="https://petfamily.it/wp-content/uploads/2021/01/gatto-ricorda-persone-e-luoghiweb.jpg" alt="gatto">
+<!-- tag sematici per le immagini-->
+<figure>
+    <img src="img/gatto.webp" alt="gatto">
+    <figcaption>Didascalia: Foto di un fantastico gatto</figcaption>
+</figure>
+</body>
+</html>

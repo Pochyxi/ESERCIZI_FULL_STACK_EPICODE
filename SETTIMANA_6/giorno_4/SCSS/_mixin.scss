@@ -1,0 +1,73 @@
+@import 'variables';
+
+
+@mixin navContainer {
+    background-color: $navBg;
+    border-radius: 20px;
+    border: 2px solid $navBorder;
+    box-shadow: 2px 2px 5px $navShadow;
+}
+
+@mixin navBarContainer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    padding: 1em;
+    margin: 0;
+    list-style-type: none;
+    & li a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@mixin mainContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: 800px){
+        flex-direction: row;
+    }
+    
+    & article {
+        order: 2;
+        padding: $paddingCont;
+    }
+    @media screen and (min-width:800px) {
+        & article {
+            order:1;
+            width: 70%;
+        }
+    }
+
+    & aside {
+        order: 1;
+        
+    }
+    & a {
+        text-decoration: none;
+        background-color: $navBg;
+        color: white;
+        
+    }
+    @media screen and (min-width:800px) {
+        & aside {
+            order: 2;
+            flex-basis: 3;
+            width: 30%;
+        }
+    }
+
+    & ul {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    & li {
+        border-bottom: 2px dotted gray;
+        padding: .5em;
+    }
+    
+}

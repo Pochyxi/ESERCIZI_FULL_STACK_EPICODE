@@ -1,0 +1,21 @@
+body {
+    font-size: 1.2rem;
+    padding: 2em;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 1em;
+    border: 5px groove blue;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(19, 19, 213), rgb(165, 165, 190))
+}
+input {
+    border: 2px inset gainsboro;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.032);
+}
+
+.table {
+    border: 5px solid rgb(172, 172, 172);
+    box-shadow: 5px 5px 10px blue;
+}

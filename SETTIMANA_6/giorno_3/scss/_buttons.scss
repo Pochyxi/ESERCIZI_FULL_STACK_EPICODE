@@ -1,0 +1,28 @@
+@import 'variables';
+
+
+.btn-primary {
+    background-color: $btnPrimary;
+    color: $liColor;
+    padding: $btnPrimaryPadding;
+    margin-right: $btnPrimaryMargin;
+    border-radius: $btnPrimaryRadius;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $btnPrimaryHover;
+    }
+}
+
+.btn-secondary {
+    background-color: $btnSecondary;
+    color: $liColor;
+    padding: $btnSecondaryPadding;
+    margin-right: $btnSecondaryMargin;
+    border-radius: $btnSecondaryRadius;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $btnSecondaryHover;
+    }
+}

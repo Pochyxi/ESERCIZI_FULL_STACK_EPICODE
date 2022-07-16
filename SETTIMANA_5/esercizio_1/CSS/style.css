@@ -1,0 +1,18 @@
+#bling {
+    height: 80vh;
+    padding: 2em;
+    text-align: center;
+    animation : neon 50ms infinite;
+    border: 10px solid rgb(0, 251, 84);
+    border-radius: 50px;
+}
+p {
+    color: white;
+    font-size: 5rem;
+    text-shadow: 4px 4px 4px black;
+}
+
+@keyframes neon {
+    50%{border-color: rgba(0, 251, 84, 0.77);}
+}
+

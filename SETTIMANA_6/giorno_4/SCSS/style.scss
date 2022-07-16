@@ -1,0 +1,26 @@
+@import 'mixin';
+@import 'variables';
+@import 'fonts';
+
+.nav {
+    @include navContainer;
+
+    &-list {
+        @include navBarContainer;
+    }
+}
+
+.container {
+ @include mainContainer;   
+}
+
+button {
+    background-color: $button;
+    border-radius: 5px;
+    color: white;
+}
+
+#footer {
+    background-color: $footerBg;
+    height: 100px;
+}

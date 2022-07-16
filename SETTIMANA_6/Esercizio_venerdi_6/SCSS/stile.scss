@@ -1,0 +1,105 @@
+@import '../node_modules/bootstrap-scss/bootstrap.scss';
+@import 'mixin';
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.nav-link {
+    color: $danger!important;
+    &:hover {
+        color: $white!important;
+    }
+}
+
+.p--home {
+    color: $light!important;
+    &:hover {
+        color: $danger!important;
+    }
+}
+
+.p--icon {
+    font-size: 1.5rem;
+    
+}
+
+.p--cont {
+    padding: 0;
+    margin-top: 50px;
+    background-image: url('../PHOTOS/145.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .p--textbanner {
+        @include padding;
+
+        h1 {
+            font-weight: 300;
+        }
+    }
+    
+}
+
+.p--card {
+    @include padding;
+
+    .p--iconCard {
+        font-size: 3rem;
+    }
+    h5 {
+        font-weight: 300;
+    }
+}
+
+.p--partners {
+    .p--svgTop {
+        transform: rotate(180deg);
+        color: #dcdcdc;
+    }
+    h2 {
+        font-weight: 400;
+    }
+    .p--containerPartners img {
+        width: 100%;
+        
+    }
+}
+
+.p--carousel {
+    padding: 2em 2em;
+    text-align: center;
+
+    .p--carouselTitle {
+        margin-top: 2em;
+    }
+
+    .p--text {
+        margin-top: 2em;
+        line-height: 2;
+        font-size: 1.5rem;
+        text-indent: 10px;
+
+
+        .p--quotes {
+            font-size: 3rem;
+            transform: rotateY(180deg);
+            position: relative;
+            right: 20px;
+            color: $danger;
+            
+        }
+    }
+    .p--person {
+        margin-top: 2em;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        background-color:$teal;
+        
+    }
+}
+
+
+
+

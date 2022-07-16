@@ -1,0 +1,13 @@
+$fFamily: 'Roboto';
+
+@mixin font-family-import($fFamily) {
+    $fFamily: unquote($fFamily);
+    @import url(://fonts.googleapis.com/css2?family=#{$fFamily});
+}
+
+@include font-family-import($fFamily);
+
+*{
+    font-family: $fFamily, sans-serif;
+    font-size: 1.2rem;
+}

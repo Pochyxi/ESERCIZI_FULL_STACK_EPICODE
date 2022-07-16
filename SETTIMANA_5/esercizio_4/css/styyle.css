@@ -1,0 +1,76 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/*CREO UN MENU A COMPARSA*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+#menuButton {
+    margin-bottom: 2em;
+    padding: .5em;
+    color: white;
+    background-color: black;
+}
+ul {
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+li {
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    padding: 1em;
+}
+a {
+    text-decoration: none;
+    color: gray;
+    background-color: white;
+    padding: .5em 2em;
+    border: 2px gray solid;
+    border-radius: 5px;
+   
+}
+#tendina {
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+    transition: height 1s ease-out;
+    border: 5px inset red;
+    background-image: linear-gradient(to bottom, rgb(212, 212, 241), rgb(163, 163, 255));
+    border-radius: 5px;
+}
+
+
+/*********CREO LA FUNZIONALITA DI MODIFICARE IL TESTO*********/
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bottoneModificatore {
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 2em;
+}
+ .sottolineatura {
+     text-decoration: line-through;
+ }
+ p {
+     display: inline;
+     padding: .5em;
+ }

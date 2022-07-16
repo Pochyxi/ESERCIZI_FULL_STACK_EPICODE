@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cosa sono gli array e come utilizzarli">
+    <link rel="stylesheet" href="CSS/array.css">
+    <title>Gli array</title>
+</head>
+<body>
+    
+    <div class="sfondo">
+        <header></header>
+        <div class="scheda">
+            <div class="spiegazione">
+                <h1>Gli Array</h1>
+                <p>Gli array sono liste di oggetti in cui salvare dati anche di diverso tipo. Gli array ci consentono di associare più valori ad un unico nome di variabile. L'uso degli array evita di definire più variabili e semplifica lo svolgimento di operazioni.</p>
+            </div>
+            <div class="esempio">
+                <h2>Esempio</h2>
+                <p><code> var arrayDiPersone = [ <br>
+                    'Marco',<br>
+                    'Giulia',<br>
+                    'Lorenzo',<br>
+                    'Adiener', <br>
+                    'Francesco', <br>
+                    'Luca',   <br>
+                    'Domenico'  <br>
+                    ];         </code> </p>
+                <ul>
+                    <li>Sono delimitati da parentesi quadre</li>
+                    <li>i singoli elementi sono separati da virgole</li>
+                </ul>
+                <div class="console">
+                <button onclick="logArray()">Console.log(myArray)</button>
+                <p id="paraconsole"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scheda">
+            <div class="spiegazione">
+                <h1>Leggere il terzo elemento di un array</h1>
+                <p>Dopo aver creato il nostro array possiamo accedervi richiamando il nome dell'array ed il suo indici racchiudendoli tra parentesi quadre.</p>
+            </div>
+            <div class="esempio">
+                <h2>Esempio</h2>
+                <p>Dichiariamo innanzitutto una variabile che sia uguale all'indice dell'array desiderato: <br>
+                <code> indiceTre = myArray[2]; </code><br>
+            ricordiamoci che gli elementi all'interno di un array vengono contati a partire da 0</p>
+                <div class="console">
+                    <button onclick="myArray3()">Evoca Lorenzo!</button>
+                    <p id="lorenzo"></p>
+                </div>   
+            </div>
+        </div>
+
+        <div class="scheda">
+            <div class="spiegazione">
+                <h1>Aggiungere un elemento in un array tramite una variabile</h1>
+                <p> Per aggiungere un elemento in un array possiamo utilizzare il suo metodo <code>.push()</code> il quale aggiungerà un nuovo elemento.</p>
+            </div>
+            <div class="esempio">
+                <h2>Esempio</h2>
+                <p><code> var newName = 'Franco';<br>
+                    myArray.push(newName);<br>
+                    console.log(myArray);</code></p>
+                <div class="console">
+                    <button onclick="arrayPlus()">Aggiungi un valore a myArray</button>
+                    <p id="arrPlus"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scheda">
+            <div class="spiegazione">
+                <h1>Creiamo un array di valori numerici e con una funzione li utilizziamo </h1>
+                <p>I valori di un array possono essere utilizzati dal metodo <code>.map</code> che li andrà ad elaborare ad un ad uno e ritornerà un nuovo array contenente il risultato elaborato. </p>
+            </div>
+            <div class="esempio">
+                <h2>Esempio</h2>
+                <p><code>var arrayMath = [20, 500, 7, 50]; <br><br>
+
+                    function dividoPerDue () { <br>
+                        let arrayDiviso = arrayMath.map(Math.sqrt);<br>
+                        console.log(arrayDiviso);
+                    </code></p>
+                <div class="console">
+                    <button onclick="radiceQuadrata()">Fai la radice quadrata!</button>
+                    <p id="radiceQuadrata"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scheda">
+            <div class="spiegazione">
+                <h1>Aggiungere o eliminare elementi in un array</h1>
+                <p>E' possibile eliminare o aggiungere elementi in un array utilizzando i metodi <br>
+                    <code>.pop()</code> elimina alla fine e non accetta valori <br>
+                    <code>.push()</code> aggiungi alla fine ed accetta tra le parentesi il valore da aggiungere<br>
+                    <code>.shift()</code> elimina all'inizio e non accetta valori <br>
+                    <code>.unshift()</code> aggiunge all'inizio ed accetta tra le parentesi il valore da aggiungere </p>
+                <h1>E se volessimo aggiungere o togliere elementi in qualsiasi posizione?</h1>
+                <p>Esistono due metodi: <br>
+                    <code>.slice()</code> accetta due argomenti, il primo è la posizione di partenza ed il secondo è il numero di elementi da eliminare. <br>
+                    Non modifica l'array originale <br> <br>
+                    <code>.splice()</code> accetta due argomenti minimo e altri infiniti argomenti. Il primo è la posizione di partenza, il secondo è il numero di elementi da eliminare <br>
+                    e gli altri argomenti sono i da aggiungere, possono essere infiniti <br>
+                    modifica l'array originale </p>
+            </div>
+            <div class="esempio">
+                <h2>Esempio</h2>
+                <p>Oh no! questo array (<code>var wrongArray = <span id="arrayWrong">['sadaqqqwq', 'Aggiustato', 'zzxzssssss'];</code></span>) è davvero brutto, ma non preoccuparti ho preparato la seguente funzione che ne modifica il contenuto: <br>
+                    function correctIt (array) {  <br>
+                        array.pop(); <br>
+                        array.shift(); <br>
+                        return array; <br>
+                    } <br>
+                    function log () {  <br>
+                        console.log(correctIt(wrongArray)); <br>
+                    } </p>
+                <div class="console">
+                    <button onclick="log()">Aggiusta array</button>
+                    <p id="fixIt"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scheda">
+            <div class="spiegazione">
+                <h1>I metodi <code>.sort()</code> e <code>reverse.()</code></h1>
+                <p>.sort() prende gli elementi di un array, lo ordina in scala ascendente  e ritorna un nuovo array <br>
+                .reverse() prende gli elementi in un array, li inverte e ritorna un nuovo array </p>
+            </div>
+            <div class="esempio">
+                <h2>Esempio</h2>
+                <p></p>
+                <div class="console">
+                    <button onclick="()"></button>
+                    <button onclick="()"></button>
+                    <p id="fixIt"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="spiegazione">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="esempio">
+            <h2>Esempio</h2>
+            <p></p>
+            <div class="console">
+                <button onclick="()"></button>
+                <p id="fixIt"></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="JS/array.js"></script>
+</body>
+</html>

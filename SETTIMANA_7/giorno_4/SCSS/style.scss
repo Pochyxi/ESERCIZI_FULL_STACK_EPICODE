@@ -1,0 +1,57 @@
+@import "../node_modules/bootstrap-scss/bootstrap.scss";
+*{
+    box-sizing: border-box;
+}
+.p--nav {
+    background-color: $indigo;
+    padding: 1em;
+
+    .p--logo {
+        color: white;
+        text-shadow: 2px 2px 5px;
+    }
+    .p--link {
+        color: white!important;
+        border: 2px solid white;
+        margin-left: 1em;
+        border-radius: 5px;
+        margin: .5em;
+        text-align: center;
+
+        &:hover {
+            color: orangered!important;
+            border: 2px solid orangered!important;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        margin: 2em 0;
+    }
+    a {
+        transition: width 1s ease,
+                    background-color 2s ease;
+        width: 20%;
+
+        &:hover {
+            width: 50%;
+            background-color: $indigo!important;
+        }
+    }
+}
+
+.card-footer {
+    background-color: $indigo!important;
+
+    li {
+        color: white;
+        list-style-type: none;
+    }
+}
+

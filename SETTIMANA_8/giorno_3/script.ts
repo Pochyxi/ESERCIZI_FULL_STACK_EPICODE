@@ -86,7 +86,8 @@ class LiberoProfessionista extends Lavoratore implements tasse {
         super(redditoannuolordo, codredd);
     }
 };
-
+// TEST
+/*
 let x = new Dipendente(25000);
 let y = new Commerciante(35000);
 let z = new LiberoProfessionista(140000);
@@ -94,6 +95,7 @@ let z = new LiberoProfessionista(140000);
 console.log(x.getInfo());
 console.log(y.getInfo());
 console.log(z.getInfo());
+*/
 
 // AGGIUNTA DI FUNZIONALITA NELL'INDEX.HTML //
 
@@ -103,25 +105,39 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     
     let redditoAnnuo:any = document.querySelector("#redditoAnnuo");
+        redditoAnnuo.required = true;
 
     let commerciante:any = document.querySelector("#commerciante");
     let dipendente:any = document.querySelector("#dipendente");
     let libero:any = document.querySelector("#libero");
 
-    if (commerciante.checked == true) {
+    if (commerciante.checked == true && dipendente.checked == false && libero.checked == false) {
         let user = new Commerciante(parseInt(redditoAnnuo.value));
             displayInner(user.getInfo());
 
-    } else if ( dipendente.checked == true) {
+    }
+    if ( dipendente.checked == true && libero.checked == false &&commerciante.checked == false) {
         let user = new Dipendente(parseInt(redditoAnnuo.value));
             displayInner(user.getInfo());
-
-    } else if (libero.checked == true) {
+    }
+    if (libero.checked == true && dipendente.checked == false && commerciante.checked == false) {
         let user = new LiberoProfessionista(parseInt(redditoAnnuo.value));
         displayInner(user.getInfo());
     }
 
-    
+
+    if (commerciante.checked == true && libero.checked == true){
+        alert("Massimo una categoria per volta");
+    }
+    if (libero.checked == true && dipendente.checked == true){
+        alert("Massimo una categoria per volta");
+    }
+    if (dipendente.checked == true && commerciante.checked == true) {
+        alert("Massimo una categoria per volta");
+    }
+    if (commerciante.checked == false && dipendente.checked == false && libero.checked == false) {
+        alert("seleziona la categoria");
+    }
 })
 
 function displayInner(string:string) {

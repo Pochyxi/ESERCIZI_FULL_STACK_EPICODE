@@ -96,31 +96,48 @@ var LiberoProfessionista = /** @class */ (function (_super) {
     return LiberoProfessionista;
 }(Lavoratore));
 ;
-var x = new Dipendente(25000);
-var y = new Commerciante(35000);
-var z = new LiberoProfessionista(140000);
+// TEST
+/*
+let x = new Dipendente(25000);
+let y = new Commerciante(35000);
+let z = new LiberoProfessionista(140000);
+
 console.log(x.getInfo());
 console.log(y.getInfo());
 console.log(z.getInfo());
+*/
 // AGGIUNTA DI FUNZIONALITA NELL'INDEX.HTML //
 var form = document.querySelector("#form");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     var redditoAnnuo = document.querySelector("#redditoAnnuo");
+    redditoAnnuo.required = true;
     var commerciante = document.querySelector("#commerciante");
     var dipendente = document.querySelector("#dipendente");
     var libero = document.querySelector("#libero");
-    if (commerciante.checked == true) {
+    if (commerciante.checked == true && dipendente.checked == false && libero.checked == false) {
         var user = new Commerciante(parseInt(redditoAnnuo.value));
         displayInner(user.getInfo());
     }
-    else if (dipendente.checked == true) {
+    if (dipendente.checked == true && libero.checked == false && commerciante.checked == false) {
         var user = new Dipendente(parseInt(redditoAnnuo.value));
         displayInner(user.getInfo());
     }
-    else if (libero.checked == true) {
+    if (libero.checked == true && dipendente.checked == false && commerciante.checked == false) {
         var user = new LiberoProfessionista(parseInt(redditoAnnuo.value));
         displayInner(user.getInfo());
+    }
+    if (commerciante.checked == true && libero.checked == true) {
+        alert("Massimo una categoria per volta");
+    }
+    if (libero.checked == true && dipendente.checked == true) {
+        alert("Massimo una categoria per volta");
+    }
+    if (dipendente.checked == true && commerciante.checked == true) {
+        alert("Massimo una categoria per volta");
+    }
+    if (commerciante.checked == false && dipendente.checked == false && libero.checked == false) {
+        alert("seleziona la categoria");
     }
 });
 function displayInner(string) {

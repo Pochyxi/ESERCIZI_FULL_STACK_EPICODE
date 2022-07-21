@@ -10,6 +10,15 @@
             text-align: center;
         }
         input, button {margin-top: 1em;}
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+       #redditoAnnuo, #confirm {
+           width: 50%;
+           align-self: center;
+           text-align: center;
+       } 
     </style>
 </head>
 <body>
@@ -17,6 +26,7 @@
         <h1>CALCOLA LE TUE TASSE</h1>
         <label for="redditoAnnuo">Il tuo reddito</label>
         <input type="text" id="redditoAnnuo"><br>
+        <h2>Seleziona una categoria</h2>
         <label for="commerciante">Commerciante</label>
         <input type="checkbox" id="commerciante"><br>
         <label for="dipendente">Dipendente</label>

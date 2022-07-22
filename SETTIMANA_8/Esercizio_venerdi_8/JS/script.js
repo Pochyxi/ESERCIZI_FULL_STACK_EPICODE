@@ -160,7 +160,6 @@ var Displayer = /** @class */ (function () {
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
                     var importo = parseInt(ricaricaInput.value);
-                    user.credito = parseInt(user.credito);
                     user.ricarica(importo);
                     console.log(typeof importo, typeof user.credito);
                     credito.innerHTML = "Credito residuo: ".concat(user.credito.toString(), " \u20AC");
@@ -222,7 +221,8 @@ function getUsers() {
                     res = _a.sent();
                     arrOfUsers = [];
                     res.forEach(function (e) {
-                        var userSmartphone = new UserSmartphone(e.utente, e.numeroCellulare, e.credito, e.numeroChiamate, e.rubrica);
+                        var credito = parseInt(e.credito);
+                        var userSmartphone = new UserSmartphone(e.utente, e.numeroCellulare, credito, e.numeroChiamate, e.rubrica);
                         arrOfUsers.push(userSmartphone);
                     });
                     console.log(arrOfUsers);

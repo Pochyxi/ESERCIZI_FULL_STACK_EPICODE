@@ -165,7 +165,7 @@ class Displayer {
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
                     let importo = parseInt(ricaricaInput.value);
-                    user.credito = parseInt(user.credito);
+                    
                     user.ricarica(importo)
 
                     console.log(typeof importo, typeof user.credito);
@@ -240,7 +240,8 @@ async function getUsers() {
     let arrOfUsers:UserSmartphone[] = [];
     
     res.forEach((e) => {
-        let userSmartphone = new UserSmartphone(e.utente, e.numeroCellulare, e.credito, e.numeroChiamate, e.rubrica);
+        let credito = parseInt(e.credito);
+        let userSmartphone = new UserSmartphone(e.utente, e.numeroCellulare, credito, e.numeroChiamate, e.rubrica);
         arrOfUsers.push(userSmartphone);
 
        

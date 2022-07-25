@@ -1,0 +1,16 @@
+<div id="div" (click)="change();">
+  <h1>Welcome ANGULAR</h1>
+  <p>numero fortunato di oggi: {{lotto}}</p>
+  <p>click me to change image</p>
+
+  <div *ngFor="let v of arr">
+  Sono il div {{v}}
+  </div>
+
+  <p>creo un div per ogni elemento nel mio array con *ngFor</p>
+  <p>clicca sul bottone, se arriva a 11 creo un nuovo DIV</p>
+  <button id="button" (click)="aumenta()">+</button>
+  <div *ngIf="x > 10">
+  <h1>ECCOMI! sono un *ngIf</h1>
+  </div>
+</div>

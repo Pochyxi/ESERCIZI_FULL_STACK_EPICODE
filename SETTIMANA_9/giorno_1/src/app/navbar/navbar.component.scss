@@ -1,0 +1,24 @@
+nav {
+  background-color: indigo;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: .5em;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}

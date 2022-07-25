@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#tabella, #dettagli {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: lightgray;
+}

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import { MainImageComponent } from './main-image/main-image.component';
+import { ExtraComponent } from './extra/extra.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MainImageComponent } from './main-image/main-image.component';
     NavbarComponent,
     MainComponent,
     MainImageComponent,
+    ExtraComponent,
 
   ],
   imports: [

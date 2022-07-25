@@ -1,0 +1,16 @@
+<div class="container">
+  <div id="tabella">
+    <div class="row">
+      <span>Nome</span>
+      <span>Dettagli</span>
+    </div>
+    <div class="row" *ngFor="let id in users">
+      <span>{{id.name}}</span>
+      <span>Mostra Dettagli</span>
+    </div>
+
+  </div>
+  <div id="dettagli">
+    <span>Nome:</span>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+div {
+  text-align: center;
+  border: 2px solid aqua;
+  margin-top: 1.5em;
+  background-color: rgba(127, 255, 212, 0.135);
+
+  .number {
+    display: inline;
+    position: relative;
+    bottom: .6em;
+    background-color: rgb(119, 112, 112);
+    color: rgb(255, 255, 255);
+  }
+}

@@ -1,0 +1,28 @@
+a {
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 2em;
+  border: 2px solid;
+  border-radius: 15px;
+  padding: 1em;
+  color: white;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#active {
+  background-image: linear-gradient(to top, green, indigo);
+}
+#inactive {
+  background-image: linear-gradient(to top, red, indigo);
+}
+
+
+

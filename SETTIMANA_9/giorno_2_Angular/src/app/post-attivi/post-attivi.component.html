@@ -1,0 +1,6 @@
+<div *ngFor="let e of arrOfActivePosts; index as i">
+  <div class="number">POST N.{{e.id}}</div>
+  <h2>{{e.title}}</h2>
+  <p>{{e.body}}</p>
+  <button (click)="change(e.id, i);">disactive</button>
+</div>

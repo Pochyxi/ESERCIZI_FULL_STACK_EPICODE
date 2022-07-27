@@ -1,0 +1,25 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 10px aqua;
+
+  li {
+    background-color: aqua;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 0.5em;
+    text-shadow: 0px 0px 5px black;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+    &:hover {
+      background-color: bisque;
+    }
+  }
+}

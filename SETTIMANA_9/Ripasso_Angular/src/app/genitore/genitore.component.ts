@@ -9,7 +9,7 @@ import { DatabaseServiceService } from '../database-service.service';
 })
 export class GenitoreComponent implements OnInit {
 
-  arrayDelGenitore:DatabaseInterface [] = [];// questo è il nostro array che dovremmo riempire con quello che ci arriverà dal service
+  arrayDelGenitore:DatabaseInterface [] = [];// questo è il nostro array che dovremmo riempire con quello che ci arriverà dal service.
 
   //two way binding
   nomeVal:string = 'x';

@@ -1,0 +1,15 @@
+.p-container {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  text-align: center;
+
+  .posts {
+    width: 50%;
+  }
+  .dettagli {
+    position: fixed;
+    right: 0;
+    width: 48%;
+  }
+}

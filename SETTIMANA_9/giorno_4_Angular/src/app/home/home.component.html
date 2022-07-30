@@ -1,0 +1,27 @@
+<div class="p-container">
+  <div class="active">
+    <h1>POST ATTIVI</h1>
+    <div class="post" *ngFor="let post of posts">
+      <div *ngIf="post.active === true">
+        <h1>
+          {{post.title}}
+        </h1>
+        <p>{{post.body}}</p>
+        <p>tipologia: {{post.type}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="inactive">
+    <h1>POST INATTIVI</h1>
+    <div class="post" *ngFor="let post of posts">
+      <div *ngIf="post.active === false">
+          <h1>
+          {{post.title}}
+          </h1>
+          <p>{{post.body}}</p>
+          <p>tipologia: {{post.type}}</p>
+      </div>
+
+    </div>
+  </div>
+</div>

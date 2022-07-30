@@ -1,0 +1,9 @@
+<div class="p-container">
+  <div class="card">
+    <h1>{{attivi.title}}</h1>
+    <p>{{attivi.body}}</p>
+    <p>{{attivi.type}}</p>
+    <button (click)="mostraDettagli(this.attivi)">Dettagli</button>
+    <button (click)="changeStatus(this.attivi.id, this.attivi.active)">{{attivi.active == true ? "disable" : "active"}}</button>
+  </div>
+</div>

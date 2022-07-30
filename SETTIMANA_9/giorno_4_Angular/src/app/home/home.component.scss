@@ -1,0 +1,18 @@
+.p-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1em;
+
+  .active{
+    border: 2px outset gainsboro;
+    width: 45%;
+  }
+  .inactive {
+    width: 45%;
+    border: 2px outset gainsboro;
+  }
+  .post {
+    background-color: rgba(220, 220, 220, 0.452);
+  }
+}

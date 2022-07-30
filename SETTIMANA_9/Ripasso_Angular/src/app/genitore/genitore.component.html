@@ -1,0 +1,39 @@
+<!-- <p>Nel componente, dobbiamo ricevere il nostro array dal service, nel ts scriverò la logica</p>
+<p>Una volta fatta la logica questo {{arrayDelGenitore}} dovrebbe essere l'array che ci arriva dal service, se guardi la console dovresti vederlo.</p>
+<p>Ora avremmo bisogno di visualizzare uno ad uno gli oggetti che sono contenuti all'interno dell'array del service, a questo punto dobbiamo avere un componente
+  "figlio" che gestista ogni singolo componente
+</p>
+<p>Spostiamoci nel figlio ed inizializiamolo</p> -->
+<!-- MI SPOSTO NEL TS DEL FIGLIO ---------------->
+<!-- <p>Una volta impostato il figlio in modo che possa ricevere il segnale impostiamo il segnale da mandare</p> -->
+
+<!-- (shotId) significa che ogni qual volta all'interno del figlio verrà emesso un segnale verso il genitore, esso a sua avolta richiamerà il suo metodo, -->
+<!-- passandogli come parametro il segnale ricevuto con $event  -->
+
+<app-figlio *ngFor="let element of arrayDelGenitore; index as i" [elementoDelFiglio]="element" (shotId)="deleteFromArray($event)"></app-figlio>
+<!-- visualizziamo per ogni elemento nell'array un app-figlio, l'indice in questo caso non ci servirà ma è utile sapere che possiamo ottenere questo valore -->
+
+<!-- dato che siamo nell'html del genitore dobbiamo prendere con il binding [] elementoDelFiglio che si trova appunto nel figlio e dichiarare che esso è uguale -->
+<!-- a element che è ogni singolo elemento all'interno dell'arrayDelGenitore -->
+
+<!-- dato che il collegamento è stato effettuato possiamo spostarci nell'html del figlio e visualizzare ogni singolo parametro all'interno dell'html di elementoDelFiglio --------------->
+
+
+<!-- creo un semplice imput per inserire un nuovo utente -->
+<!-- mi prendero i valori di ogni singolo input attraverso il two way binding -->
+<!-- PER ABILITARE L'NGMODEL E' IMPORTANTE ANDARE NELL'APP.MODULE ED IMPORTARE FormsModule -->
+  <h2>Nuovo utente</h2>
+  <label for="nome" >Nome: </label>
+  <input type="text" id="nome" [(ngModel)]="nomeVal"><br>
+  <label for="cognome">Cognome: </label>
+  <input type="text" id="cognome" [(ngModel)]="cognomeVal"><br>
+  <label for="età">Età: </label>
+  <input type="text" id="età" [(ngModel)]="etaVal"><br>
+  <label for="messaggio">Messaggio: </label>
+  <input type="text" id="messaggio" [(ngModel)]="messaggioVal">
+  <button (click)="addNewUser(this.nomeVal, this.cognomeVal, this.etaVal, this.messaggioVal)">conferma</button>
+  <!-- il metodo addNewUser accettera 4 parametri che sono i valori dell'input  -->
+
+<!-- DATO CHE ADESSO NECESSITIAMO ANCHE DI UN PULSANTE PER ELIMINARE UN UTENTE, ESSO DEVE ESSERE FATTO ALL'INTERNO DI OGNI SINGOLO FIGLIO -->
+<!-- MI SPOSTO NEL FIGLIO ----------->
+

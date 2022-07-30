@@ -1,0 +1,15 @@
+<div class="p-container">
+  <div class="posts">
+    <app-post-card *ngFor="let post of postsAttivi" [attivi]="post" (getPostDettagli)="dettagli($event)" (getPostMod)="change($event)"></app-post-card>
+  </div>
+
+  <div class="dettagli" *ngIf="control">
+    <h1>DETTAGLI</h1>
+    <p>ID: {{dettagliPost.id}}</p>
+    <p>TITLE: {{dettagliPost.title}}</p>
+    <p>BODY: {{dettagliPost.body}}</p>
+    <p>TYPE: {{dettagliPost.type}}</p>
+    <p>DATE: {{dettagliPost.date}}</p>
+  </div>
+</div>
+

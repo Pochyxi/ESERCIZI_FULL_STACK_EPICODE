@@ -1,0 +1,12 @@
+<p>{{elementoDelFiglio.id}}</p>
+<p appEvidenzia>{{elementoDelFiglio.nome}}</p>
+<p>{{elementoDelFiglio.cognome}}</p>
+<p>{{elementoDelFiglio.messaggio | anteprima}}</p>
+<!-- Questo è il mio bottoche che servirà ad eliminare l'utente con un metodo DELETE nel fetch
+dato che le informazioni di ogni singolo figlio, e cioè di ogni determinato elemento si trovano all'interno del componente figlio, mentre l'eliminazione
+dovrà avvenire nell'array del genitore, avremmo bisogno di un eventEmitter che passi l'informazzione dal figlio al genitore -->
+<button (click)="deleteUser(elementoDelFiglio.id)">Elimina</button>
+
+<!-- Come potete vedere dato che siamo riusciti a  passare correttamente dal genitore al figlio i singolo oggetto all'interno dell'array tramite un ciclo for,
+verranno create tanti figli per ogni elemento dell'array ed i paragrafi creati qui sopra prenderanno i dati contenuti all'interno dell'oggetto per renderizzarli -->
+<!-- ora, dobbiamo fare in modo di creare un modo per aggiungere nuovi utenti , dato che l'array con tutti gli cel'ha il genitore, spostiamoci li --------->

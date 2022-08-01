@@ -1,0 +1,16 @@
+<div class="container">
+  <img src="{{photo.thumbnailUrl}}" alt="photo">
+  <div class="title">
+    <h2>{{photo.title}}</h2>
+  </div>
+
+  <div class="buttons">
+    <button class="buttonDelete" (click)="deletePhoto(this.photo)">ELIMINA</button>
+
+
+    <button class="buttonLike" (click)="addLike()">MI PIACE</button>
+  </div>
+    <div class="likes">
+      <span>mi piace: {{this.photo.likes}}</span>
+    </div>
+</div>

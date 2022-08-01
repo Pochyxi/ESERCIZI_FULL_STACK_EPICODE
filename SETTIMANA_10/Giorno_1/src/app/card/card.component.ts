@@ -36,4 +36,8 @@ export class CardComponent implements OnInit {
     });
 
   }
+  ngOnDestroy() {
+    this.likeRequest.unsubscribe();
+    this.deleteRequest.unsubscribe();
+  }
 }

@@ -29,4 +29,7 @@ export class HomeComponent implements OnInit {
   deletePhoto(obj:Photo) {
     this.photos = this.photos.filter((photos: { id: number; }) => photos.id != obj.id);
   }
+  ngOnDestroy(): void {
+    this.photoRequest.unsubscribe();
+  };
 }

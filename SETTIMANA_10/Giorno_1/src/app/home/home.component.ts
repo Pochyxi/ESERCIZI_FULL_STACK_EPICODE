@@ -10,7 +10,7 @@ import { PhotoService } from '../photo.service';
 })
 export class HomeComponent implements OnInit {
 
-  photos!:Photo | any
+  photos!:Photo | any;
 
   photoRequest!:Subscription
 
